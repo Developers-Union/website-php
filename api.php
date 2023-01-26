@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-$lijin = "data/" //用户数据储存路径
+$lujin = "data/" //用户数据储存路径
 if(!empty($_POST["type"])){
 	$caozuo = $_POST["type"]
 	switch($caozuo){
@@ -27,7 +27,7 @@ if(!empty($_POST["type"])){
 			$datajson = array("code"=>"error");
 	}
 }else{
-	$datajson = array("code"=>"done");
+	$datajson = array("code"=>"error");
 }
 echo json_encode($datajson);
 ?>
